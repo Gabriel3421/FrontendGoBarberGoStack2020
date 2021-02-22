@@ -28,7 +28,7 @@ const SignIn: React.FC = () => {
         const schema = Yup.object().shape({
           password: Yup.string().required('Senha obrigatoria'),
           password_confirmation: Yup.string().oneOf(
-            [Yup.ref('password'), undefined],
+            [Yup.ref('password')],
             'Senhas devem coincidir',
           ),
         });
